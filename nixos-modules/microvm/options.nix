@@ -65,6 +65,12 @@ in
       type = types.int;
     };
 
+    cpuArgs = mkOption {
+      description = "Optional CPU arguments";
+      default = null;
+      type = with types; nullOr str;
+    };
+
     mem = mkOption {
       description = "Amount of RAM in megabytes";
       default = 512;
