@@ -138,7 +138,7 @@ in {
          then "${pkgs.cloud-hypervisor-graphics}/bin/cloud-hypervisor"
          else "${pkgs.cloud-hypervisor}/bin/cloud-hypervisor"
         )
-        "--cpus" "boot=${toString vcpu}"
+        "--cpus" "boot=${toString vcpu},max_phys_bits=39"
         "--watchdog"
         "--console" "null"
         "--serial" "tty"
